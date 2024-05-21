@@ -1,5 +1,6 @@
-package com.lazyben.demo.exception;
+package com.lazyben.demo.pojo;
 
+import com.lazyben.demo.exception.ServiceException;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

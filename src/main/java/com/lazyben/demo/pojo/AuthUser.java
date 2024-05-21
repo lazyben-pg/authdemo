@@ -1,7 +1,6 @@
 package com.lazyben.demo.pojo;
 
-import lombok.Builder;
-import lombok.Getter;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
@@ -10,13 +9,14 @@ import java.util.Collection;
 
 @Component
 @Builder
+@Data
+@ToString
 public class AuthUser implements UserDetails {
 
     private String username;
 
     private String password;
 
-    @Getter
     private Integer state;
 
     private Collection<? extends GrantedAuthority> authorities;
@@ -46,7 +46,6 @@ public class AuthUser implements UserDetails {
         return username;
     }
 
-    // 账户是否未过期
     @Override
     public boolean isAccountNonExpired() {
         return true;
@@ -66,19 +65,5 @@ public class AuthUser implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
-    }
-
-    public void setState(Integer state) {
-        this.state = state;
-    }
-
-    @Override
-    public String toString() {
-        return "JwtUser{" +
-                "username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", state=" + state +
-                ", authorities=" + authorities +
-                '}';
     }
 }

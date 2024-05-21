@@ -2,8 +2,7 @@ package com.lazyben.demo.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lazyben.demo.constant.BizCode;
-import com.lazyben.demo.exception.AuthenticationException;
-import com.lazyben.demo.exception.ErrorResponse;
+import com.lazyben.demo.pojo.ErrorResponse;
 import com.lazyben.demo.exception.ServiceException;
 import com.lazyben.demo.utils.JwtTokenUtil;
 import com.lazyben.demo.utils.WebUtil;

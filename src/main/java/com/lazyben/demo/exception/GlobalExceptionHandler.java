@@ -1,5 +1,6 @@
 package com.lazyben.demo.exception;
 
+import com.lazyben.demo.pojo.ErrorResponse;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
